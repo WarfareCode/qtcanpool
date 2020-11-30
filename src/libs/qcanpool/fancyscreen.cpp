@@ -95,6 +95,6 @@ QRect FancyScreen::normalRect()
     geom = QGuiApplication::primaryScreen()->virtualGeometry();
 #endif
 #endif
-    return QRect(geom.x() + 100, geom.y() + 100,
+    return QRect(geom.x() + geom.width() / 6, geom.y() + geom.height() / 6,
                  2 * geom.width() / 3, 2 * geom.height() / 3);
 }

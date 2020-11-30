@@ -64,8 +64,7 @@ FancyWindow::FancyWindow(QWidget *parent)
     connect(d->fancyBar, SIGNAL(maximizationChanged(bool)), this, SIGNAL(resizable(bool)));
     setMenuWidget(d->fancyBar);
     setMouseTracking(true);
-    QRect geom = FancyScreen::normalRect();
-    resize(geom.width(), geom.height());
+    setGeometry(FancyScreen::normalRect());
     raise();
     activateWindow();
 }
